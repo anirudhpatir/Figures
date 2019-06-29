@@ -1,6 +1,6 @@
 library(gridExtra)
 library(RColorBrewer)
-library(ggplot
+library(ggplot2)
 
 ColoRMap = function(n,val,pal=NULL){
   val = as.numeric(unlist(val))
@@ -17,15 +17,15 @@ ColoRMap = function(n,val,pal=NULL){
 
 ColoRMapPlot = function(val,pal){
   z <- density(val, n = 2^12)
-  a1 = ggplot(data.frame(x = z$x, y = z$y), aes(x, y)) + geom_line() + 
-    geom_segment(aes(xend = x, yend = 0, colour = x)) + 
-    scale_color_gradientn(colours = pal)+
-    labs(y = "Density",x = "Value",color = "")+
-    theme_classic()
-  a2 = ggplot(data.frame(x = 1:length(val), y = sort(val)), aes(x, y,color = y)) + 
+  a1 = ggplot(data.frame(x = 1:length(val), y = sort(val)), aes(x, y,color = y)) + 
     geom_point() + 
     scale_color_gradientn(colours = pal)+
     labs(y = "Value",x = "Index", color = "")+
+    theme_classic()
+  a2 = ggplot(data.frame(x = z$x, y = z$y), aes(x, y)) + geom_line() + 
+    geom_segment(aes(xend = x, yend = 0, colour = x)) + 
+    scale_color_gradientn(colours = pal)+
+    labs(y = "Density",x = "Value",color = "")+
     theme_classic()
   grid.arrange(a1,a2)
 }
