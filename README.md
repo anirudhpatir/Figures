@@ -1,7 +1,7 @@
 # Figures
 The function maps a colour pallete to a non linear distribution
 
-ColouRMap    
+## ColouRMap    
 Input:  
 n = number of colours to output   
 d = the values on which to map (vector, matrix, dataframe)  
@@ -9,7 +9,7 @@ pal = a pallete (default is spectral)
 Ouput:  
 vector of colours in Hex  
 
-ColouRMapPlot  
+## ColouRMapPlot  
 Input:  
 x = distribution (vector, matrix, dataframe)  
 pal = a pallete (default is spectral)  
