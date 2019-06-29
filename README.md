@@ -20,3 +20,14 @@ pal = a pallete (default is spectral)
   
 Output:  
 plot palete mapped on density and values of data
+
+## Example
+#Data 1   
+x1 = rnbinom(1000, 10, .5)  
+x2 = rnbinom(1000,50,.5)  
+x = c(x1,x2) 
+
+y = ColoRMap(200,x)  
+ColoRMapPlot(x,y)  
+
+![](image.png)
