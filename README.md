@@ -1,7 +1,8 @@
 # Figures
-The function maps a colour palette to a non linear distribution
+Some figures & ideas for describing data  
 
-## ColouRMap    
+## ColouRMap  
+The function maps a colour palette to a non linear distribution  
 ### Input:  
 n = number of colours to output   
 val = the values on which to map (vector, matrix, dataframe)  
@@ -11,6 +12,7 @@ pal = a palette (default is spectral)
 vector of colours in Hex  
 
 ## ColouRMapPlot 
+Plots palette mapped on to data from ColouRMap
 ### Dependencies:  
 ggplot, gridExtra, RColorBrewer
   
