@@ -1,4 +1,6 @@
 library(gridExtra)
+library(RColorBrewer)
+library(ggplot
 
 ColoRMap = function(n,val,pal=NULL){
   val = as.numeric(unlist(val))
